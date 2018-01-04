@@ -1,14 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import LoginForm from "../forms/LoginForm";
 
-export const LoginPage = props => {
-  return (
-    <div>
-      <h1>Loginpage</h1>
-    </div>
-  );
-};
-
-LoginPage.propTypes = {
-  
-};
+export class LoginPage extends Component {
+  submit(data) {
+    console.log(data);
+  }
+  render() {
+    return (
+      <div>
+        <h1>Login</h1>
+        <LoginForm submit={this.submit} />
+      </div>
+    );
+  }
+}
