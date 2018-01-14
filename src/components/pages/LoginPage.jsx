@@ -1,14 +1,16 @@
-import React, { Component } from "react";
-import LoginForm from "../forms/LoginForm";
-import { connect } from "react-redux";
-import { login } from "../../actions/auth";
+import React, { Component } from 'react';
+import LoginForm from '../forms/LoginForm';
+import { connect } from 'react-redux';
+import { login } from '../../actions/auth';
 class LoginPage extends Component {
   constructor(props) {
     super(props);
     this.submit = this.submit.bind(this);
   }
   submit(data) {
-    return this.props.login(data).then(() => this.props.history.push("/"));
+    return this.props
+      .login(data)
+      .then(() => this.props.history.push('/dashboard'));
   }
   render() {
     return (
